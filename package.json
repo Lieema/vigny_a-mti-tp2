@@ -60,18 +60,27 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "moduleFileExtensions": ["jsx", "js", "json"],
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ],
     "moduleNameMapper": {
-      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/config/jest/FileStub.js",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/FileStub.js",
       "^.+\\.css$": "<rootDir>/config/jest/CSSStub.js"
     },
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
-    "testPathIgnorePatterns": ["<rootDir>/(build|docs|node_modules)/"],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ],
     "testEnvironment": "node"
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
