@@ -17,14 +17,16 @@ class Cell extends React.Component {
     super(props);
 
     this.state = {
-      content: "?",
-      isHover: false    
+      content: props.content,
+      isHover: props.isHover,
+      onClickFunc: props.onClickFunc
     };
   }
 
   // getDerivedStateFromProps is called before every render,
   // use it to infer new state values from props or state changes.
   static getDerivedStateFromProps(props, state) {
+    state.content = props.content;
     return state;
   }
 
@@ -46,10 +48,11 @@ class Cell extends React.Component {
     return "white";
   }
 
-  render() {
+  render() {    
     return (
       <div style={{...cellStyle, backgroundColor: this.getColor()}}
-        onMouseOut={ this.onOut } onMouseOver={ this.onHover }>
+        onMouseOut={ this.onOut } onMouseOver={ this.onHover }
+        onClick={ this.state.onClickFunc }>
         { this.state.content }
       </div>
     );
