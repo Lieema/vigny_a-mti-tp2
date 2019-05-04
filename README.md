@@ -1,3 +1,5 @@
+TP Done by Axel Vigny (vigny_a)
+
 # TP1 - Tic Tac Toe
 
 In this workshop you will build a Tic Tac Toe game using React.
