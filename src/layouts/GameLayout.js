@@ -41,7 +41,7 @@ class GameLayout extends React.Component {
         onClick={() => this.setState({ currentPlayer: this.getNextPlayer(this.state.currentPlayer) })}
       >
         <GameInfo  gameState="stale" currentPlayer={ this.state.currentPlayer }  />
-        <Board />
+        <Board cells={ this.state.cells }/>
       </div>
     );
   }
