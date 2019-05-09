@@ -1,5 +1,11 @@
 TP Done by Axel Vigny (vigny_a)
 
+Bonuses: 
+-  Play again button
+-  Draw handle
+-  You can choose number of cells in the grid
+    - To do so, change the property 'nbLineCells' of GameLayout in index.js
+
 # TP1 - Tic Tac Toe
 
 In this workshop you will build a Tic Tac Toe game using React.
