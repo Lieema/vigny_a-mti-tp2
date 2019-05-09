@@ -156,7 +156,7 @@ class GameLayout extends React.Component {
           style={gameLayoutStyle}        
         >
           <GameInfo  gameState={ this.state.gameState } currentPlayer={ this.state.currentPlayer }  />
-          <Board cells={ this.state.cells } onClickFunc={ this.onClickCell(this.state.cells) }/>
+          <Board cells={ this.state.cells } onClickFunc={ this.onClickCell(this.state.cells) }  nbLineCells={ this.state.nbLineCells }/>
         </div>
       );
     }

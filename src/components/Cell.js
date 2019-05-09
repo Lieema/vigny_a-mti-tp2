@@ -3,8 +3,6 @@ import React from "react";
 const cellStyle = {
   display: "block",
   backgroundColor: "white",
-  width: "200px",
-  height: "200px",
   border: "1px solid #333",
   outline: "none",
   textAlign: "center",
@@ -19,7 +17,8 @@ class Cell extends React.Component {
     this.state = {
       content: props.content,
       isHover: props.isHover,
-      onClickFunc: props.onClickFunc
+      onClickFunc: props.onClickFunc,
+      sideSize: props.sideSize
     };
   }
 
@@ -50,7 +49,7 @@ class Cell extends React.Component {
 
   render() {    
     return (
-      <div style={{...cellStyle, backgroundColor: this.getColor()}}
+      <div style={{...cellStyle, backgroundColor: this.getColor(), width: (600/this.state.sideSize) + "px", height: (600/this.state.sideSize) + "px"}}
         onMouseOut={ this.onOut } onMouseOver={ this.onHover }
         onClick={ this.state.onClickFunc }>
         { this.state.content }
